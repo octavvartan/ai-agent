@@ -20,7 +20,8 @@ There is no test runner and no linter. `npm test` fails on purpose. Use `npm run
 `npm run format:check` to verify changes.
 
 The server port comes from the `PORT` environment variable (default `3000`). `.env` is in
-`.gitignore`, but no code loads it. To use it, run Node with `--env-file=.env`.
+`.gitignore`. `npm run dev` and `npm start` load it with `--env-file-if-exists=.env`. If the file
+does not exist, the server starts without it.
 
 ## Toolchain constraints
 

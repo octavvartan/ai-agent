@@ -5,7 +5,7 @@ const port = Number(process.env.PORT ?? 3000);
 
 app.use(express.json());
 
-app.get("/health", (_req: Request, res: Response) => {
+app.get("/health", async (_req: Request, res: Response) => {
   res.json({ status: "ok" });
 });
 
